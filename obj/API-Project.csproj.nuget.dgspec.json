@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\REST API PROJECT\\API-Project\\API-Project.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\Etapa I\\REST API PROJECT\\API-Project\\API-Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\REST API PROJECT\\API-Project\\API-Project.csproj": {
+    "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\Etapa I\\REST API PROJECT\\API-Project\\API-Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\REST API PROJECT\\API-Project\\API-Project.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\Etapa I\\REST API PROJECT\\API-Project\\API-Project.csproj",
         "projectName": "API-Project",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\REST API PROJECT\\API-Project\\API-Project.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\Etapa I\\REST API PROJECT\\API-Project\\API-Project.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\REST API PROJECT\\API-Project\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\Etapa I\\REST API PROJECT\\API-Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

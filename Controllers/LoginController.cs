@@ -22,8 +22,21 @@ namespace API_Project.Controllers
                _login = login;
                this._configuration=configuration;
           }
+          /// <summary>
+          /// Authenticate a user and generate an authentication token.
+          /// </summary>
+          /// <param name="userLogin">The user's login credentials.</param>
+          /// <remarks>
+          /// This endpoint allows users to log in by providing their credentials and returns an authentication token if successful.
+          /// </remarks>
+          /// <returns>Returns a 200 OK response with an authentication token if authentication is successful, or a 404 Not Found response with the message "UserNotFound" if the user is not found or authentication fails.</returns>
+          /// <response code="200">Returns an authentication token if authentication is successful.</response>
+          /// <response code="404">If the user is not found or authentication fails, returns a 404 Not Found response with the message "UserNotFound".</response>
           [AllowAnonymous]
           [HttpPost]
+          [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+          [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]
+
           public IActionResult Login([FromBody] UserLogin userLogin)
           {
                var user = Authenticate(userLogin);

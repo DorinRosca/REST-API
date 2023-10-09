@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H/0cyTlat+7V+/XOHUmf2T1elG3FJ9lpwRtQuWtPYA0ZQ6TyIPDFniAqsh3Z1DCqMwt56q2PklR1cN7/fbAdNw==",
+  "dgSpecHash": "80t4RApYT2194AwZLw+oNrRjRblktAyV4NLwjYOxthLtBvOIzxIRjhWCMYRbQfmF8u1RF5qMACOmp4d5l4jhDw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\REST API PROJECT\\API-Project\\API-Project.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Desktop\\EBS-Integrator Internship\\Etapa I\\REST API PROJECT\\API-Project\\API-Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\dapper\\2.0.143\\dapper.2.0.143.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.8\\microsoft.aspnetcore.authentication.jwtbearer.7.0.8.nupkg.sha512",

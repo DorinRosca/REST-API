@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Text;
 using API_Project.Context;
 using API_Project.Controllers;
@@ -64,8 +65,12 @@ builder.Services.AddSwaggerGen(c =>
                     Id = "Bearer"
                }
           },
-          Array.Empty<string>()
+          Array.Empty<string>()    
      }});
+     //Api Documentation
+     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+     c.IncludeXmlComments(xmlPath);
 
 });
 

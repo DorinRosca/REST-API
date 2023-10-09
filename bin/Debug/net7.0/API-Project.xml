@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API-Project</name>
+    </assembly>
+    <members>
+        <member name="M:API_Project.Controllers.AddressController.EditAddress(System.Int32,API_Project.DTO.Address.AddressEditDTO)">
+            <summary>
+            Edit an existing Address
+            </summary>
+            <param name="id">The unique identifier of the address to be edited.</param>
+            <param name="address">The updated address information to be applied.</param>
+            <returns>Returns an IActionResult indicating the result of the edit operation</returns>
+            <response code="200">the product was successfully added in DBase </response>
+            <response code="400">Unable to add product due to validation error or an product with such name already exist</response>
+        </member>
+        <member name="M:API_Project.Controllers.AddressController.GetAddress(System.Int32)">
+            <summary>
+            Get an address by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the address to retrieve.</param>
+            <returns>Returns an IActionResult containing the address information if found, or a NotFound response if not found.</returns>
+            <response code="200">Returns an IActionResult with a 200 status code and the address information if found.</response>
+            <response code="404">Returns an IActionResult with a 404 status code if the address with the specified ID is not found.</response>
+        </member>
+        <member name="M:API_Project.Controllers.CustomerController.AddCustomer(API_Project.DTO.Customer.CustomerAddDTO)">
+            <summary>
+            Retrieves a list of customers.
+            </summary>
+            <remarks>
+            This endpoint returns a list of customers from the repository.
+            </remarks>
+            <returns>Returns a list of customers if any are found, or a 404 Not Found response if no customers are available.</returns>
+        </member>
+        <member name="M:API_Project.Controllers.CustomerController.EditCustomer(System.Int32,API_Project.DTO.Customer.CustomerEditDTO)">
+            <summary>
+            Edit an existing customer by ID.
+            </summary>
+            <param name="id">The ID of the customer to edit.</param>
+            <param name="customer">The updated customer data.</param>
+            <remarks>
+            This endpoint allows you to edit an existing customer's information.
+            </remarks>
+            <returns>Returns a 200 OK response with the edited customer data if successful, or a 404 Not Found response if the customer with the specified ID is not found.</returns>
+            <response code="200">Returns the edited customer data if the update is successful.</response>
+            <response code="404">If the customer with the specified ID is not found.</response>
+        </member>
+        <member name="M:API_Project.Controllers.CustomerController.GetCustomer(System.Int32)">
+            <summary>
+            Get a customer by ID.
+            </summary>
+            <param name="id">The ID of the customer to retrieve.</param>
+            <remarks>
+            This endpoint allows you to retrieve a customer's information by specifying their ID.
+            </remarks>
+            <returns>Returns a 200 OK response with the customer data if found, or a 404 Not Found response if the customer with the specified ID is not found.</returns>
+            <response code="200">Returns the customer data if found.</response>
+            <response code="404">If the customer with the specified ID is not found.</response>
+        </member>
+        <member name="M:API_Project.Controllers.FoodCategoryController.GetCategories(System.Int32)">
+            <summary>
+            Get food categories by ID.
+            </summary>
+            <param name="id">The ID of the food item to retrieve categories for.</param>
+            <remarks>
+            This endpoint allows you to retrieve food categories for a specific food item by specifying its ID.
+            </remarks>
+            <returns>Returns a 200 OK response with the list of food categories if found, or a 404 Not Found response if no categories are available.</returns>
+            <response code="200">Returns the list of food categories if found.</response>
+            <response code="404">If no categories are available for the specified food item ID.</response>
+        </member>
+        <member name="M:API_Project.Controllers.FoodCategoryController.AddCategory(System.Int32,API_Project.DTO.FoodCategory.FoodCategoryAddDTO)">
+            <summary>
+            Add a new food category for a food item by ID.
+            </summary>
+            <param name="id">The ID of the food item to which the category will be added.</param>
+            <param name="foodCategory">The data for the new food category.</param>
+            <remarks>
+            This endpoint allows you to add a new food category to a specific food item by specifying its ID.
+            </remarks>
+            <returns>Returns a 200 OK response with the newly created food category if successful.</returns>
+            <response code="200">Returns the newly created food category if the operation is successful.</response>
+        </member>
+        <member name="M:API_Project.Controllers.FoodCategoryController.EditCategory(System.Int32,API_Project.DTO.FoodCategory.FoodCategoryEditDTO)">
+            <summary>
+            Edit an existing food category by ID.
+            </summary>
+            <param name="id">The ID of the food category to edit.</param>
+            <param name="foodCategory">The updated food category data.</param>
+            <remarks>
+            This endpoint allows you to edit an existing food category's information by specifying its ID.
+            </remarks>
+            <returns>Returns a 200 OK response with the updated food category data if successful, or a 404 Not Found response if the food category with the specified ID is not found.</returns>
+            <response code="200">Returns the updated food category data if the edit is successful.</response>
+            <response code="404">If the food category with the specified ID is not found.</response>
+        </member>
+        <member name="M:API_Project.Controllers.FoodItemsController.GetAllItems(System.Int32)">
+            <summary>
+            Get all food items by category ID.
+            </summary>
+            <param name="id">The ID of the food category to retrieve items for.</param>
+            <remarks>
+            This endpoint allows you to retrieve all food items belonging to a specific food category by specifying its ID.
+            </remarks>
+            <returns>Returns a 200 OK response with the list of food items if found, or a 404 Not Found response if no items are available.</returns>
+            <response code="200">Returns the list of food items if found.</response>
+            <response code="404">If no items are available for the specified food category ID.</response>
+        </member>
+        <member name="M:API_Project.Controllers.FoodItemsController.SearchItems(System.String)">
+            <summary>
+            Search for food items based on a query.
+            </summary>
+            <param name="query">The search query to find matching food items.</param>
+            <remarks>
+            This endpoint allows you to search for food items based on a query string.
+            </remarks>
+            <param name="query">The search query.</param>
+            <returns>Returns a 200 OK response with a list of matching food items if found, or a 404 Not Found response if no items match the query.</returns>
+            <response code="200">Returns a list of matching food items if found.</response>
+            <response code="404">If no items match the provided query.</response>
+        </member>
+        <member name="M:API_Project.Controllers.FoodItemsController.EditFoodItem(System.Int32,API_Project.DTO.FoodItem.FoodItemEditDTO)">
+            <summary>
+            Edit an existing food item by ID.
+            </summary>
+            <param name="id">The ID of the food item to edit.</param>
+            <param name="foodItem">The updated food item data.</param>
+            <remarks>
+            This endpoint allows you to edit an existing food item's information by specifying its ID.
+            </remarks>
+            <returns>Returns a 200 OK response with the updated food item data if successful, or a 404 Not Found response if the food item with the specified ID is not found.</returns>
+            <response code="200">Returns the updated food item data if the edit is successful.</response>
+            <response code="404">If the food item with the specified ID is not found.</response>
+        </member>
+        <member name="M:API_Project.Controllers.FoodOrderController.AddOrder(API_Project.DTO.FoodOrder.FoodOrderAddDTO)">
+            <summary>
+            Add a new food order.
+            </summary>
+            <param name="order">The data for the new food order.</param>
+            <remarks>
+            This endpoint allows you to add a new food order.
+            </remarks>
+            <returns>Returns a 200 OK response with the newly created food order if successful.</returns>
+            <response code="200">Returns the newly created food order if the operation is successful.</response>
+        </member>
+        <member name="M:API_Project.Controllers.FoodOrderController.CancelOrder(System.Int32)">
+            <summary>
+            Cancel a food order by ID.
+            </summary>
+            <param name="id">The ID of the food order to cancel.</param>
+            <remarks>
+            This endpoint allows you to cancel a food order by specifying its ID.
+            </remarks>
+            <returns>Returns a 200 OK response if the cancellation is successful, or a 404 Not Found response if the order with the specified ID is not found.</returns>
+            <response code="200">Returns a 200 OK response if the cancellation is successful.</response>
+            <response code="404">If the order with the specified ID is not found.</response>
+        </member>
+        <member name="M:API_Project.Controllers.FoodOrderController.SetDriver(System.Int32,System.Int32)">
+            <summary>
+            Set a driver for a food order by order ID.
+            </summary>
+            <param name="id">The ID of the food order to set the driver for.</param>
+            <param name="driverId">The ID of the driver to assign to the order.</param>
+            <remarks>
+            This endpoint allows authorized users (Admin or Driver roles) to set a driver for a food order by specifying the order ID and driver ID.
+            </remarks>
+            <returns>Returns a 200 OK response if the operation is successful, or a 404 Not Found response if the order with the specified ID is not found.</returns>
+            <response code="200">Returns a 200 OK response if the operation is successful.</response>
+            <response code="404">If the order with the specified ID is not found.</response>
+        </member>
+        <member name="M:API_Project.Controllers.LoginController.Login(API_Project.Models.UserLogin)">
+            <summary>
+            Authenticate a user and generate an authentication token.
+            </summary>
+            <param name="userLogin">The user's login credentials.</param>
+            <remarks>
+            This endpoint allows users to log in by providing their credentials and returns an authentication token if successful.
+            </remarks>
+            <returns>Returns a 200 OK response with an authentication token if authentication is successful, or a 404 Not Found response with the message "UserNotFound" if the user is not found or authentication fails.</returns>
+            <response code="200">Returns an authentication token if authentication is successful.</response>
+            <response code="404">If the user is not found or authentication fails, returns a 404 Not Found response with the message "UserNotFound".</response>
+        </member>
+        <member name="M:API_Project.Controllers.RestaurantController.GetRestaurants">
+            <summary>
+            Get a list of restaurants.
+            </summary>
+            <remarks>
+            This endpoint retrieves a list of restaurants.
+            </remarks>
+            <returns>Returns a 200 OK response with a list of restaurants if any are found, or a 404 Not Found response if no restaurants are available.</returns>
+            <response code="200">Returns a list of restaurants if any are found.</response>
+            <response code="404">If no restaurants are available.</response>
+        </member>
+        <member name="M:API_Project.Controllers.RestaurantController.CreateRestaurant(API_Project.DTO.Restaurant.RestaurantAddDTO)">
+            <summary>
+            Create a new restaurant.
+            </summary>
+            <param name="restaurant">The data for the new restaurant.</param>
+            <remarks>
+            This endpoint allows you to create a new restaurant.
+            </remarks>
+            <returns>Returns a 201 Created response with a location header and the newly created restaurant if successful.</returns>
+            <response code="201">Returns a 201 Created response with a location header and the newly created restaurant if successful.</response>
+            <response code="400">If the request data is invalid or incomplete.</response>
+        </member>
+        <member name="M:API_Project.Controllers.RestaurantController.GetRestaurant(System.Int32)">
+            <summary>
+            Get a restaurant by ID.
+            </summary>
+            <param name="id">The ID of the restaurant to retrieve.</param>
+            <remarks>
+            This endpoint allows you to retrieve a restaurant's information by specifying its ID.
+            </remarks>
+            <returns>Returns a 200 OK response with the restaurant data if found, or a 404 Not Found response if the restaurant with the specified ID is not found.</returns>
+            <response code="200">Returns the restaurant data if found.</response>
+            <response code="404">If the restaurant with the specified ID is not found.</response>
+        </member>
+        <member name="M:API_Project.Controllers.RestaurantController.EditRestaurant(System.Int32,API_Project.DTO.Restaurant.RestaurantEditDTO)">
+            <summary>
+            Edit an existing restaurant by ID.
+            </summary>
+            <param name="id">The ID of the restaurant to edit.</param>
+            <param name="restaurant">The updated restaurant data.</param>
+            <remarks>
+            This endpoint allows you to edit an existing restaurant's information by specifying its ID.
+            </remarks>
+            <returns>Returns a 200 OK response if the edit is successful, or a 400 Bad Request response if the edit fails.</returns>
+            <response code="200">Returns a 200 OK response if the edit is successful.</response>
+            <response code="400">If the edit fails.</response>
+        </member>
+        <member name="M:API_Project.Controllers.RestaurantController.GetRestaurantMenu(System.Int32)">
+            <summary>
+            Get the menu of a restaurant by ID.
+            </summary>
+            <param name="id">The ID of the restaurant to retrieve the menu for.</param>
+            <remarks>
+            This endpoint allows you to retrieve the menu of a restaurant by specifying its ID.
+            </remarks>
+            <returns>Returns a 200 OK response with the restaurant's menu if found, or a 404 Not Found response if the restaurant with the specified ID is not found.</returns>
+            <response code="200">Returns the restaurant's menu if found.</response>
+            <response code="404">If the restaurant with the specified ID is not found.</response>
+        </member>
+        <member name="M:API_Project.Controllers.UserController.AddUser(API_Project.DTO.User.UserAddDTO)">
+            <summary>
+            Add a new user with the specified role.
+            </summary>
+            <param name="user">The data for the new user.</param>
+            <remarks>
+            This endpoint allows authorized users with the "Admin" role to add a new user with the specified role.
+            </remarks>
+            <param name="user">The user data.</param>
+            <returns>Returns a 200 OK response if the user is added successfully, or a 400 Bad Request response if the operation fails.</returns>
+            <response code="200">Returns a 200 OK response if the user is added successfully.</response>
+            <response code="400">If the operation fails.</response>
+        </member>
+    </members>
+</doc>
