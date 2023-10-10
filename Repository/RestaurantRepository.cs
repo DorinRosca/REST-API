@@ -50,10 +50,10 @@ namespace API_Project.Repository
 
           public async Task<RestaurantModel> GetRestaurant(int id)
           {
-               var query = @"SELECT * FROM Restaurant r 
-                              JOIN FoodCategory c ON c.RestaurantId = r.Id 
-                              JOIN FoodItem i ON i.FoodCategoryId = c.Id 
-                              JOIN Address idr on r.AddressId = idr.Id WHERE r.Id = @id";
+               var query = @"SELECT * FROM Restaurant r
+                             LEFT JOIN FoodCategory c ON c.RestaurantId = r.id 
+                             LEFT JOIN FoodItem i ON i.FoodCategoryId = c.Id 
+                             LEFT JOIN Address idr on r.AddressId = idr.Id WHERE r.id = @Id";
                var restaurantDict = new Dictionary<int, RestaurantModel>();
 
                var parameters = new DynamicParameters();

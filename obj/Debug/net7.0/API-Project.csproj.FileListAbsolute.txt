@@ -93,6 +93,7 @@ C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Pro
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\bin\Debug\net7.0\API-Project.runtimeconfig.json
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\bin\Debug\net7.0\API-Project.dll
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\bin\Debug\net7.0\API-Project.pdb
+C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\bin\Debug\net7.0\API-Project.xml
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\bin\Debug\net7.0\Dapper.dll
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
@@ -131,8 +132,7 @@ C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Pro
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\obj\Debug\net7.0\API-Project.csproj.CopyComplete
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\obj\Debug\net7.0\API-Project.dll
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\obj\Debug\net7.0\refint\API-Project.dll
+C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\obj\Debug\net7.0\API-Project.xml
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\obj\Debug\net7.0\API-Project.pdb
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\obj\Debug\net7.0\API-Project.genruntimeconfig.cache
 C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\obj\Debug\net7.0\ref\API-Project.dll
-C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\bin\Debug\net7.0\API-Project.xml
-C:\Users\Asus\Desktop\EBS-Integrator Internship\Etapa I\REST API PROJECT\API-Project\obj\Debug\net7.0\API-Project.xml

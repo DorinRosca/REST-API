@@ -20,7 +20,6 @@ namespace API_Project.Repository
           public async Task<FoodOrderModel> AddFoodOrder(FoodOrderAddDTO foodOrder)
           {
                foodOrder.OrderDateTime = DateTime.Now;
-               int sum = 0;
                foreach (var item in foodOrder.OrderItems)
                {
                     foodOrder.TotalAmount += item.FoodItemPrice * item.Quantity;

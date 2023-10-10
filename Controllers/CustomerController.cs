@@ -17,7 +17,18 @@ namespace API_Project.Controllers
                this._customerRepository = customer;
           }
 
+          /// <summary>
+          /// Get a list of customers.
+          /// </summary>
+          /// <remarks>
+          /// This endpoint retrieves a list of customers.
+          /// </remarks>
+          /// <returns>Returns a 200 OK response with a list of customers if any are found, or a 404 Not Found response if no customers are available.</returns>
+          /// <response code="200">Returns a list of customers if any are found.</response>
+          /// <response code="404">If no customers are available.</response>
           [HttpGet]
+          [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<CustomerModel>))]
+          [ProducesResponseType(StatusCodes.Status404NotFound)]
           public async Task<IActionResult> GetCustomers()
           {
                var customers = await _customerRepository.GetCustomers();
@@ -31,16 +42,21 @@ namespace API_Project.Controllers
                }
           }
           
+          
           /// <summary>
-          /// Retrieves a list of customers.
+          /// Add a new customer.
           /// </summary>
+          /// <param name="customer">The data for the new customer.</param>
           /// <remarks>
-          /// This endpoint returns a list of customers from the repository.
+          /// This endpoint allows you to add a new customer.
           /// </remarks>
-          /// <returns>Returns a list of customers if any are found, or a 404 Not Found response if no customers are available.</returns>
-          [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<CustomerModel>))]
-          [ProducesResponseType(StatusCodes.Status404NotFound)]
+          /// <param name="customer">The customer data.</param>
+          /// <returns>Returns a 201 Created response with a location header and the newly created customer if successful.</returns>
+          /// <response code="201">Returns a 201 Created response with a location header and the newly created customer if successful.</response>
+          /// <response code="400">If the request data is invalid or incomplete.</response>
           [HttpPost("add")]
+          [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(CustomerModel))]
+          [ProducesResponseType(StatusCodes.Status400BadRequest)]
           public async Task<IActionResult> AddCustomer([FromBody] CustomerAddDTO customer)
           {
                var createdCustomer = await _customerRepository.AddCustomer(customer);

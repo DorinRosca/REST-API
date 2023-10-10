@@ -35,7 +35,7 @@ namespace API_Project.Controllers
                {
                     return Ok(editedAddress);
                }
-               return Problem();
+               return NotFound();
           }
           /// <summary>
           /// Get an address by its unique identifier.
@@ -60,7 +60,6 @@ namespace API_Project.Controllers
                {
                     // Return a successful response with the retrieved address
                     return Ok(address);
-                    return NotFound();
                }
           }
 

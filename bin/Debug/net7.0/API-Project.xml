@@ -23,14 +23,29 @@
             <response code="200">Returns an IActionResult with a 200 status code and the address information if found.</response>
             <response code="404">Returns an IActionResult with a 404 status code if the address with the specified ID is not found.</response>
         </member>
-        <member name="M:API_Project.Controllers.CustomerController.AddCustomer(API_Project.DTO.Customer.CustomerAddDTO)">
+        <member name="M:API_Project.Controllers.CustomerController.GetCustomers">
             <summary>
-            Retrieves a list of customers.
+            Get a list of customers.
             </summary>
             <remarks>
-            This endpoint returns a list of customers from the repository.
+            This endpoint retrieves a list of customers.
             </remarks>
-            <returns>Returns a list of customers if any are found, or a 404 Not Found response if no customers are available.</returns>
+            <returns>Returns a 200 OK response with a list of customers if any are found, or a 404 Not Found response if no customers are available.</returns>
+            <response code="200">Returns a list of customers if any are found.</response>
+            <response code="404">If no customers are available.</response>
+        </member>
+        <member name="M:API_Project.Controllers.CustomerController.AddCustomer(API_Project.DTO.Customer.CustomerAddDTO)">
+            <summary>
+            Add a new customer.
+            </summary>
+            <param name="customer">The data for the new customer.</param>
+            <remarks>
+            This endpoint allows you to add a new customer.
+            </remarks>
+            <param name="customer">The customer data.</param>
+            <returns>Returns a 201 Created response with a location header and the newly created customer if successful.</returns>
+            <response code="201">Returns a 201 Created response with a location header and the newly created customer if successful.</response>
+            <response code="400">If the request data is invalid or incomplete.</response>
         </member>
         <member name="M:API_Project.Controllers.CustomerController.EditCustomer(System.Int32,API_Project.DTO.Customer.CustomerEditDTO)">
             <summary>
@@ -71,12 +86,12 @@
         </member>
         <member name="M:API_Project.Controllers.FoodCategoryController.AddCategory(System.Int32,API_Project.DTO.FoodCategory.FoodCategoryAddDTO)">
             <summary>
-            Add a new food category for a food item by ID.
+            Add a new food category for a restaurant by ID.
             </summary>
-            <param name="id">The ID of the food item to which the category will be added.</param>
+            <param name="id">The ID of the restaurant to which the category will be added.</param>
             <param name="foodCategory">The data for the new food category.</param>
             <remarks>
-            This endpoint allows you to add a new food category to a specific food item by specifying its ID.
+            This endpoint allows you to add a new food category to a specific restaurant by specifying its ID.
             </remarks>
             <returns>Returns a 200 OK response with the newly created food category if successful.</returns>
             <response code="200">Returns the newly created food category if the operation is successful.</response>

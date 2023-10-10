@@ -42,12 +42,12 @@ namespace API_Project.Controllers
 
           }
           /// <summary>
-          /// Add a new food category for a food item by ID.
+          /// Add a new food category for a restaurant by ID.
           /// </summary>
-          /// <param name="id">The ID of the food item to which the category will be added.</param>
+          /// <param name="id">The ID of the restaurant to which the category will be added.</param>
           /// <param name="foodCategory">The data for the new food category.</param>
           /// <remarks>
-          /// This endpoint allows you to add a new food category to a specific food item by specifying its ID.
+          /// This endpoint allows you to add a new food category to a specific restaurant by specifying its ID.
           /// </remarks>
           /// <returns>Returns a 200 OK response with the newly created food category if successful.</returns>
           /// <response code="200">Returns the newly created food category if the operation is successful.</response>
