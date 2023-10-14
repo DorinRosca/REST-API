@@ -52,7 +52,7 @@ namespace API_Project.Controllers
           /// <returns>Returns a 200 OK response with the newly created food category if successful.</returns>
           /// <response code="200">Returns the newly created food category if the operation is successful.</response>
           [Authorize]
-          [HttpPost("add/{id}")]
+          [HttpPost("{id}")]
           [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(FoodCategoryModel))]
 
           public async Task<IActionResult> AddCategory(int id, [FromBody] FoodCategoryAddDTO foodCategory)
@@ -72,7 +72,7 @@ namespace API_Project.Controllers
           /// <returns>Returns a 200 OK response with the updated food category data if successful, or a 404 Not Found response if the food category with the specified ID is not found.</returns>
           /// <response code="200">Returns the updated food category data if the edit is successful.</response>
           /// <response code="404">If the food category with the specified ID is not found.</response>
-          [HttpPut("edit/{id}")]
+          [HttpPut("{id}")]
           [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(FoodCategoryModel))]
           [ProducesResponseType(StatusCodes.Status404NotFound)]
           public async Task<IActionResult> EditCategory(int id, [FromBody] FoodCategoryEditDTO foodCategory)

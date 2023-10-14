@@ -52,7 +52,7 @@ namespace API_Project.Controllers
           /// <returns>Returns a 200 OK response with a list of matching food items if found, or a 404 Not Found response if no items match the query.</returns>
           /// <response code="200">Returns a list of matching food items if found.</response>
           /// <response code="404">If no items match the provided query.</response>
-          [HttpGet("search/{query}")]
+          [HttpGet("{query}")]
           [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<FoodItemModel>))]
           [ProducesResponseType(StatusCodes.Status404NotFound)]
           public async Task<ActionResult<IEnumerable<FoodItemModel>>> SearchItems(string query)
@@ -76,7 +76,7 @@ namespace API_Project.Controllers
           /// <returns>Returns a 200 OK response with the updated food item data if successful, or a 404 Not Found response if the food item with the specified ID is not found.</returns>
           /// <response code="200">Returns the updated food item data if the edit is successful.</response>
           /// <response code="404">If the food item with the specified ID is not found.</response>
-          [HttpPut("edit/{id}")]
+          [HttpPut("{id}")]
           [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(bool))]
           [ProducesResponseType(StatusCodes.Status404NotFound)]
           public async Task<IActionResult>EditFoodItem(int id, [FromBody] FoodItemEditDTO foodItem)

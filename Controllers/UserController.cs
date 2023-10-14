@@ -28,7 +28,7 @@ public class UserController : ControllerBase
      /// <response code="200">Returns a 200 OK response if the user is added successfully.</response>
      /// <response code="400">If the operation fails.</response>
      [Authorize(Roles = "Admin")]
-     [HttpPost("add")]
+     [HttpPost]
      [ProducesResponseType(StatusCodes.Status200OK)]
      [ProducesResponseType(StatusCodes.Status400BadRequest)]
      public Task<bool> AddUser([FromBody] UserAddDTO user)

@@ -54,7 +54,7 @@ namespace API_Project.Controllers
           /// <returns>Returns a 201 Created response with a location header and the newly created customer if successful.</returns>
           /// <response code="201">Returns a 201 Created response with a location header and the newly created customer if successful.</response>
           /// <response code="400">If the request data is invalid or incomplete.</response>
-          [HttpPost("add")]
+          [HttpPost]
           [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(CustomerModel))]
           [ProducesResponseType(StatusCodes.Status400BadRequest)]
           public async Task<IActionResult> AddCustomer([FromBody] CustomerAddDTO customer)
@@ -74,7 +74,7 @@ namespace API_Project.Controllers
           /// <returns>Returns a 200 OK response with the edited customer data if successful, or a 404 Not Found response if the customer with the specified ID is not found.</returns>
           /// <response code="200">Returns the edited customer data if the update is successful.</response>
           /// <response code="404">If the customer with the specified ID is not found.</response>
-          [HttpPut("edit/{id}")]
+          [HttpPut("{id}")]
           [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CustomerModel))]
           [ProducesResponseType(StatusCodes.Status404NotFound)]
           public async Task<IActionResult> EditCustomer(int id, [FromBody] CustomerEditDTO customer)

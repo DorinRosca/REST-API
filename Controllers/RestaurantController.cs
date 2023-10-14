@@ -51,7 +51,7 @@ namespace API_Project.Controllers
           /// <returns>Returns a 201 Created response with a location header and the newly created restaurant if successful.</returns>
           /// <response code="201">Returns a 201 Created response with a location header and the newly created restaurant if successful.</response>
           /// <response code="400">If the request data is invalid or incomplete.</response>
-          [HttpPost("add")]
+          [HttpPost]
           [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(RestaurantModel))]
           [ProducesResponseType(StatusCodes.Status400BadRequest)]
           public async Task<IActionResult> CreateRestaurant([FromBody] RestaurantAddDTO restaurant)
@@ -93,7 +93,7 @@ namespace API_Project.Controllers
           /// <returns>Returns a 200 OK response if the edit is successful, or a 400 Bad Request response if the edit fails.</returns>
           /// <response code="200">Returns a 200 OK response if the edit is successful.</response>
           /// <response code="400">If the edit fails.</response>
-          [HttpPut("edit/{id}")]
+          [HttpPut("{id}")]
           [ProducesResponseType(StatusCodes.Status200OK)]
           [ProducesResponseType(StatusCodes.Status400BadRequest)]
           public async Task<bool> EditRestaurant(int id, [FromBody]RestaurantEditDTO restaurant)

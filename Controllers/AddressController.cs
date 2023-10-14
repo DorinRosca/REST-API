@@ -23,7 +23,7 @@ namespace API_Project.Controllers
           /// <returns>Returns an IActionResult indicating the result of the edit operation</returns>
           /// <response code="200">the product was successfully added in DBase </response>
           /// <response code="400">Unable to add product due to validation error or an product with such name already exist</response>
-          [HttpPut("edit{id}")]
+          [HttpPut("{id}")]
           [ProducesResponseType(typeof(bool), 200)]
           [ProducesResponseType(400)]
           public async Task<IActionResult> EditAddress(int id, [FromBody] AddressEditDTO address)

@@ -26,7 +26,7 @@ namespace API_Project.Controllers
           /// </remarks>
           /// <returns>Returns a 200 OK response with the newly created food order if successful.</returns>
           /// <response code="200">Returns the newly created food order if the operation is successful.</response>
-          [HttpPost("add")]
+          [HttpPost]
           [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(FoodOrderModel))]
           public async Task<IActionResult> AddOrder([FromBody] FoodOrderAddDTO order)
           {
@@ -67,7 +67,7 @@ namespace API_Project.Controllers
           /// <returns>Returns a 200 OK response if the operation is successful, or a 404 Not Found response if the order with the specified ID is not found.</returns>
           /// <response code="200">Returns a 200 OK response if the operation is successful.</response>
           /// <response code="404">If the order with the specified ID is not found.</response>
-          [HttpPut("setdriver/{id}")]
+          [HttpPut("{id}")]
           [Authorize(Roles = "Admin,Driver")]
           [ProducesResponseType(StatusCodes.Status200OK)]
           [ProducesResponseType(StatusCodes.Status404NotFound)]
